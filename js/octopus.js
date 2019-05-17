@@ -1,4 +1,5 @@
-function registration(){
+octopus={
+    registration: function(){
     window.onload = function() {
 
         // Check for LocalStorage support.
@@ -28,4 +29,6 @@ function registration(){
     
     }
     return true;
-}
+}};
+
+octopus.registration();
