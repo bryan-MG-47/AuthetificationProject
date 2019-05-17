@@ -25,16 +25,21 @@ view = {
         // newListul.appendChild(myName);
     },
     linktopage2:function(){
+        // verify the user information and link to the dashboard
         document.getElementById('signInForm').addEventListener('submit', function() {
-    
+            status=""
             var name=document.getElementsByName("name");
-            var secondDate=document.getElementsByName("password");
-            var queryString = "?para1=" + firstDate + "¶2=" + secondDate;
-            window.location.href = "SecondPage.html" + queryString;
-            document.getElementById("contactForm").method = "LINK";
-            document.getElementById("contactForm").action = "page2.html";
+            // var secondDate=document.getElementsByName("password");
+            var queryString = "?para1=" + name + "&2=" + status;
+            window.location.href = "page2.html" + queryString;
+            // document.getElementById("contactForm").method = "LINK";
+            // document.getElementById("contactForm").action = "page2.html";
     
         });
+    },
+    getActualUserInfo:function(){
+        var queryString = decodeURIComponent(window.location.search);
+        document.write(queryString);
     }
 }
 view.createtable();
