@@ -23,6 +23,18 @@ view = {
             
         }
         // newListul.appendChild(myName);
+    },
+    linktopage2:function(){
+        document.getElementById('signInForm').addEventListener('submit', function() {
+    
+            var name=document.getElementsByName("name");
+            var secondDate=document.getElementsByName("password");
+            var queryString = "?para1=" + firstDate + "¶2=" + secondDate;
+            window.location.href = "SecondPage.html" + queryString;
+            document.getElementById("contactForm").method = "LINK";
+            document.getElementById("contactForm").action = "page2.html";
+    
+        });
     }
 }
 view.createtable();
